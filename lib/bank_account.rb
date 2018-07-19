@@ -13,7 +13,7 @@ class BankAccount
     @balance = @balance + amount
   end
 
-  end
+end
 
   describe '#deposit' do
     it "can deposit money into its account" do
