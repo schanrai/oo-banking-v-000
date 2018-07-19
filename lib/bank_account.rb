@@ -9,7 +9,10 @@ class BankAccount
     @status = "open"
   end
 
-  def deposit
+  def deposit(amount)
+    @balance = @balance + amount
+  end
+
   end
 
   describe '#deposit' do
