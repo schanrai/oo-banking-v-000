@@ -6,6 +6,7 @@ class BankAccount
   def initialize(customer_name)
     @name = customer_name
     @balance = 1000
+    @status = "open"
   end
 
 
