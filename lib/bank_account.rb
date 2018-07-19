@@ -13,8 +13,6 @@ class BankAccount
     @balance = @balance + amount
   end
 
-end
-
 
 
 
