@@ -1,3 +1,5 @@
+require 'pry'
+
 class Transfer
   # your code here
   attr_reader
@@ -11,7 +13,8 @@ class Transfer
     end
 
     def valid?
-      sender.name.valid? && receiver.name.valid? ? true : false
+      binding.pry
+      sender.valid? && receiver.valid? ? true : false
     end
 
 end
