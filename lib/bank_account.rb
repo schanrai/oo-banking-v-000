@@ -38,3 +38,5 @@ describe '#valid?' do
     expect(@closed.valid?).to eq(false)
   end
 end
+=end 
+
