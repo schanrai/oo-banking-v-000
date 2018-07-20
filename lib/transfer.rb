@@ -17,7 +17,7 @@ class Transfer
     end
 
     def execute_transaction
-      binding.pry
+      #binding.pry
       if sender.status == "complete"
         return
       elsif self.valid? == false
