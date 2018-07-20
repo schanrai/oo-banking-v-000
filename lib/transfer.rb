@@ -19,7 +19,7 @@ class Transfer
     def execute_transaction
       if self.status == "complete"
         return
-      elsif sender.status != "open"
+      elsif sender.status !== "open"
         @status = "rejected"
         "Transaction rejected. Please check your account balance."
       elsif @status == "pending"
