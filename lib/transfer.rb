@@ -20,13 +20,14 @@ class Transfer
       #binding.pry
       if self.status == "complete"
         return
-      elsif sender.valid? == false
-        self.status = "rejected"
-        "Transaction rejected. Please check your account balance."
-      elsif @status == "pending" && sender.balance > @amount
+      elsif @status == "pending" && sender.balance > @amount && sender.valid?
       sender.balance = sender.balance - @amount
       receiver.balance = receiver.balance + @amount
       @status = "complete"
+      else
+        self.status = "rejected"
+        "Transaction rejected. Please check your account balance."
+      
       end
     end
 
