@@ -20,7 +20,7 @@ class Transfer
       if self.status == "complete"
         return
       elsif sender.status != "open"
-        @status = "rejected"
+        self.status = "rejected"
         "Transaction rejected. Please check your account balance."
       elsif @status == "pending"
       sender.balance = sender.balance - @amount
